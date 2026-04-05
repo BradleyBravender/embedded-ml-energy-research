@@ -1,71 +1,79 @@
-# Micro Speech Example
+# ESP32 TinyML Inference Benchmark
 
-This example shows how to run a 20 kB model that can recognize 2 keywords,
-"yes" and "no", from speech data.
+This project runs a TinyML keyword spotting model on the ESP32 and benchmarks:
 
-The application listens to its surroundings with a microphone and indicates
-when it has detected a word by displaying data on a screen.
+- inference latency  
+- feature extraction latency  
+- full pipeline latency  
+- memory usage (arena, heap, stack)  
+- external power consumption (via GPIO measurement)  
 
-## Deploy to ESP32
+The model recognizes:
+- **"yes"**
+- **"no"**
+- (and additional classes such as silence/unknown depending on the model)
 
-The following instructions will help you build and deploy this sample
-to [ESP32](https://www.espressif.com/en/products/hardware/esp32/overview)
-devices using the [ESP IDF](https://github.com/espressif/esp-idf).
+---
 
-The sample has been tested on ESP-IDF version `release/v4.2` and `release/v4.4` with the following devices:
-- [ESP32-DevKitC](http://esp-idf.readthedocs.io/en/latest/get-started/get-started-devkitc.html)
-- [ESP32-S3-DevKitC](https://docs.espressif.com/projects/esp-idf/en/latest/esp32s3/hw-reference/esp32s3/user-guide-devkitc-1.html)
-- [ESP-EYE](https://github.com/espressif/esp-who/blob/master/docs/en/get-started/ESP-EYE_Getting_Started_Guide.md)
+# Benchmark Overview
 
-### Install the ESP IDF
+The application runs three tests:
 
-Follow the instructions of the
-[ESP-IDF get started guide](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html)
-to setup the toolchain and the ESP-IDF itself.
+## Test 1 — YES (Precomputed Features)
+- Uses precomputed features for a "yes" sample  
+- Bypasses the audio pipeline  
+- Measures **model inference only**
 
-The next steps assume that the
-[IDF environment variables are set](https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html#step-4-set-up-the-environment-variables) :
+---
 
- * The `IDF_PATH` environment variable is set
- * `idf.py` and Xtensa-esp32 tools (e.g. `xtensa-esp32-elf-gcc`) are in `$PATH`
+## Test 2 — NO (Precomputed Features)
+- Same as Test 1, but with a "no" sample  
+- Used to validate correctness and consistency  
 
+---
 
-### Building the example
+## Test 3 — Full Pipeline (Audio → Features → Model)
+- Uses embedded raw audio  
+- Runs full preprocessing pipeline  
+- Measures:
+  - feature extraction time  
+  - inference time  
+  - total pipeline time  
 
-Set the chip target (For esp32s3 target, IDF version `release/v4.4` is needed):
+---
 
-```
-idf.py set-target esp32s3
-```
+# Power Measurement
 
-Then build with `idf.py`
-```
+A GPIO pin is used to enable external power measurement:
+
+- **GPIO 33 HIGH → active measurement window**
+
+### Measurement behavior
+
+| Test | Measurement Scope |
+|------|------------------|
+| Test 1 & 2 | Inference only (`Invoke()`) |
+| Test 3 | Full pipeline (features + inference) |
+
+Power should be measured externally (e.g., shunt resistor + oscilloscope or Analog Discovery).
+
+---
+
+# Deploy to ESP32
+
+## Install ESP-IDF
+
+Follow the official guide:  
+https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html
+
+Ensure:
+- `idf.py` is available  
+- environment variables are set  
+
+---
+
+## Build the project
+
+```bash
+idf.py set-target esp32
 idf.py build
-```
-
-### Load and run the example
-
-To flash (replace `/dev/ttyUSB0` with the device serial port):
-```
-idf.py --port /dev/ttyUSB0 flash
-```
-
-Monitor the serial output:
-```
-idf.py --port /dev/ttyUSB0 monitor
-```
-
-Use `Ctrl+]` to exit.
-
-The previous two commands can be combined:
-```
-idf.py --port /dev/ttyUSB0 flash monitor
-```
-
-### Sample output
-
-  * When a keyword is detected you will see following output sample output on the log screen:
-
-```
-Heard yes (<score>) at <time>
-```
