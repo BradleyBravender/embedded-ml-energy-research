@@ -1,0 +1,1004 @@
+Command: /Users/alex/.espressif/python_env/idf6.1_py3.13_env/bin/python /Users/alex/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0001 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/alex/esp/micro_speech/build/micro_speech.elf /Users/alex/esp/micro_speech/build/bootloader/bootloader.elf -m '/Users/alex/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/Users/alex/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-0001'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0040,len:6596
+load:0x40078000,len:16752
+ho 0 tail 12 room 4
+load:0x40080400,len:4348
+entry 0x40080664
+[0;32mI (29) boot: ESP-IDF v6.1-dev-2938-g12f36a021f 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Mar 18 2026 23:14:15[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=38858h (231512) map[0m
+[0;32mI (156) esp_image: segment 1: paddr=00048880 vaddr=3ffb0000 size=028ach ( 10412) load[0m
+[0;32mI (160) esp_image: segment 2: paddr=0004b134 vaddr=40080000 size=04ee4h ( 20196) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=36e70h (224880) map[0m
+[0;32mI (229) esp_image: segment 4: paddr=00086e98 vaddr=40084ee4 size=050f4h ( 20724) load[0m
+[0;32mI (236) esp_image: segment 5: paddr=0008bf94 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (241) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (241) boot: Disabling RNG early entropy source...[0m
+[0;32mI (254) cpu_start: Multicore app[0m
+[0;32mI (262) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (263) cpu_start: Pro cpu start user code[0m
+[0;32mI (263) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (264) app_init: Application information:[0m
+[0;32mI (268) app_init: Project name:     micro_speech[0m
+[0;32mI (273) app_init: App version:      1[0m
+I (276) app_init: Compile time:     Mar 18 2026 23:13:21
+[0;32mI (281) app_init: ELF file SHA256:  15f20a26c...[0m
+[0;32mI (285) app_init: ESP-IDF:          v6.1-dev-2938-g12f36a021f[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (295) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (299) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (314) heap_init: At 3FFD0F90 len 0000F070 (60 KiB): DRAM[0m
+[0;32mI (319) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (324) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (330) heap_init: At 40089FD8 len 00016028 (88 KiB): IRAM[0m
+[0;32mI (336) spi_flash: detected chip: generic[0m
+[0;32mI (339) spi_flash: flash io: qio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+====================================
+ESP32 TinyML Inference Benchmark
+Model input: [1, 1960] int8
+Tensor arena: 71680 bytes
+---- After setup ----
+Free heap: 173748 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 7100 words
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509128 us (509.13 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509124 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61576 us (61.58 ms)
+  Inference only:     509109 us (509.11 ms)
+  Total pipeline:     570700 us (570.70 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 173748 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509123 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509124 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61140 us (61.14 ms)
+  Inference only:     509108 us (509.11 ms)
+  Total pipeline:     570263 us (570.26 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61129 us (61.13 ms)
+  Inference only:     509109 us (509.11 ms)
+  Total pipeline:     570252 us (570.25 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61127 us (61.13 ms)
+  Inference only:     509109 us (509.11 ms)
+  Total pipeline:     570250 us (570.25 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509108 us (509.11 ms)
+  Total pipeline:     570235 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61117 us (61.12 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570241 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509109 us (509.11 ms)
+  Total pipeline:     570235 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509109 us (509.11 ms)
+  Total pipeline:     570235 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================
+Timing for YES features (pre-computed)
+  Inference only: 509120 us (509.12 ms)
+------------------------------------
+Test: YES features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+Timing for NO features (pre-computed)
+  Inference only: 509125 us (509.12 ms)
+------------------------------------
+Test: NO features (pre-computed)
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+=> Predicted: no (0.9648)
+------------------------------------
+Pipeline timing for YES audio (full pipeline)
+  Feature generation: 61112 us (61.11 ms)
+  Inference only:     509110 us (509.11 ms)
+  Total pipeline:     570236 us (570.24 ms)
+------------------------------------
+Test: YES audio (full pipeline)
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+=> Predicted: yes (0.9961)
+------------------------------------
+---- After benchmark ----
+Free heap: 177956 bytes
+Minimum free heap: 173748 bytes
+Stack high-water mark: 4028 words
+====================================
+Benchmark complete. Restarting in 20s...
+====================================

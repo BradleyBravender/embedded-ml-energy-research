@@ -1,0 +1,2 @@
+source /Users/alex/esp/micro_speech/build/gdbinit/symbols
+source /Users/alex/esp/micro_speech/build/gdbinit/connect

@@ -1,0 +1,2 @@
+source /Users/alex/esp/micro_speech/build/bootloader/gdbinit/symbols
+source /Users/alex/esp/micro_speech/build/bootloader/gdbinit/connect

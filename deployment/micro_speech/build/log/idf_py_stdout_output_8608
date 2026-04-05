@@ -1,0 +1,942 @@
+Command: /Users/alex/.espressif/python_env/idf6.1_py3.13_env/bin/python /Users/alex/esp/esp-idf/tools/idf_monitor.py -p /dev/cu.usbserial-0001 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 /Users/alex/esp/micro_speech/build/micro_speech.elf /Users/alex/esp/micro_speech/build/bootloader/bootloader.elf -m '/Users/alex/.espressif/python_env/idf6.1_py3.13_env/bin/python' '/Users/alex/esp/esp-idf/tools/idf.py' '-p' '/dev/cu.usbserial-0001'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:1
+load:0x3fff0040,len:6596
+load:0x40078000,len:16752
+ho 0 tail 12 room 4
+load:0x40080400,len:4348
+entry 0x40080664
+[0;32mI (29) boot: ESP-IDF v6.1-dev-2938-g12f36a021f 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Mar 18 2026 23:14:15[0m
+[0;32mI (29) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v3.1[0m
+[0;32mI (35) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 80MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : QIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (50) boot: Enabling RNG early entropy source...[0m
+[0;32mI (55) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (64) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (70) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (77) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (83) boot: End of partition table[0m
+[0;32mI (87) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=38af8h (232184) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00048b20 vaddr=3ffb0000 size=028ach ( 10412) load[0m
+[0;32mI (160) esp_image: segment 2: paddr=0004b3d4 vaddr=40080000 size=04c44h ( 19524) load[0m
+[0;32mI (167) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=3756ch (226668) map[0m
+[0;32mI (229) esp_image: segment 4: paddr=00087594 vaddr=40084c44 size=05394h ( 21396) load[0m
+[0;32mI (236) esp_image: segment 5: paddr=0008c930 vaddr=50000000 size=00028h (    40) load[0m
+[0;32mI (242) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (242) boot: Disabling RNG early entropy source...[0m
+[0;32mI (255) cpu_start: Multicore app[0m
+[0;32mI (263) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (263) cpu_start: Pro cpu start user code[0m
+[0;32mI (263) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (265) app_init: Application information:[0m
+[0;32mI (269) app_init: Project name:     micro_speech[0m
+[0;32mI (273) app_init: App version:      1[0m
+[0;32mI (277) app_init: Compile time:     Mar 18 2026 23:13:21[0m
+[0;32mI (282) app_init: ELF file SHA256:  1d36f7faa...[0m
+[0;32mI (286) app_init: ESP-IDF:          v6.1-dev-2938-g12f36a021f[0m
+[0;32mI (291) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (295) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (299) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (303) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (309) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (315) heap_init: At 3FFD0F90 len 0000F070 (60 KiB): DRAM[0m
+[0;32mI (320) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (325) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (331) heap_init: At 40089FD8 len 00016028 (88 KiB): IRAM[0m
+[0;32mI (336) spi_flash: detected chip: generic[0m
+[0;32mI (340) spi_flash: flash io: qio[0m
+[0;33mW (342) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (355) main_task: Started on CPU0[0m
+[0;32mI (365) main_task: Calling app_main()[0m
+====================================
+ESP32 TinyML Inference Benchmark
+Configuration:
+  Model input:     [1, 1960] int8
+  Repeated runs:   10
+  Measure pin:     GPIO 33
+Model memory:
+  Arena allocated: 71680 bytes (70 KB)
+  Arena used:      65412 bytes (63 KB)
+  Arena usage:     91.3%
+Memory (after setup):
+  Free heap:     173748 bytes (169 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     6988 words
+====================================
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509097 us (509.10 ms)
+  Max:        509129 us (509.13 ms)
+  Avg:        509105 us (509.11 ms)
+  StdDev:     8.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     5884 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509098 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.8 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     5884 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509103 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66878 us
+  Feature max: 67544 us
+  Feature avg: 66957 us (66.96 ms)
+  Infer min:   509103 us
+  Infer max:   509105 us
+  Infer avg:   509104 us (509.10 ms)
+  Total avg:   576074 us (576.07 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     173748 bytes (169 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509100 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.3 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.5 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66877 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509099 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+====================================
+Benchmark complete. Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
+Timing:
+  Runs:        10
+  Feature min: 66876 us
+  Feature max: 67089 us
+  Feature avg: 66903 us (66.90 ms)
+  Infer min:   509098 us
+  Infer max:   509105 us
+  Infer avg:   509103 us (509.10 ms)
+  Total avg:   576020 us (576.02 ms)
+Output (YES audio (full pipeline)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after full pipeline):
+  Stack HWM:     3948 words
+
+== BENCHMARK SUMMARY ==
+Memory (end of benchmark cycle):
+  Free heap:     177956 bytes (173 KB)
+  Min free heap: 173748 bytes (169 KB)
+  Stack HWM:     3948 words
+=========================                                . Restarting in 30s...
+====================================
+
+
+== TEST 1: YES features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509101 us (509.10 ms)
+  Max:        509104 us (509.10 ms)
+  Avg:        509102 us (509.10 ms)
+  StdDev:     1.2 us
+Output (YES features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0000
+  yes       : 0.9961
+  no        : 0.0000
+  Predicted:  yes (0.9961)
+Memory (after YES inference):
+  Stack HWM:     3948 words
+
+== TEST 2: NO features (pre-computed, 10 runs) ==
+Timing:
+  Runs:       10
+  Min:        509102 us (509.10 ms)
+  Max:        509106 us (509.11 ms)
+  Avg:        509103 us (509.10 ms)
+  StdDev:     1.2 us
+Output (NO features (pre-computed)):
+  silence   : 0.0000
+  unknown   : 0.0352
+  yes       : 0.0000
+  no        : 0.9648
+  Predicted:  no (0.9648)
+Memory (after NO inference):
+  Stack HWM:     3948 words
+
+== INFERENCE SUMMARY (YES + NO) ==
+  Avg inference time: 509102 us (509.10 ms)
+
+== TEST 3: YES audio full pipeline (10 runs) ==
