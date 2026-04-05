@@ -72,7 +72,7 @@ Ensure:
 
 ---
 
-## Build, Flash, and Monitor
+## Build, Flash, and Monitor (while in project directory)
 
 ```bash
 idf.py build && idf.py -p /dev/cu.usbserial-0001 flash monitor
