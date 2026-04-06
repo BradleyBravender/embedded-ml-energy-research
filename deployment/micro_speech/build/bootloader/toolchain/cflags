@@ -1,4 +1,4 @@
-"-specs=/Users/alex/esp/micro_speech/build/bootloader/specs/picolibc.specs"
+"-specs=/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader/specs/picolibc.specs"
 -Wno-frame-address
 -mlongcalls
 -fno-builtin-memcpy

@@ -94,6 +94,9 @@ int64_t RunInferenceOnce(float scores[kCategoryCount]) {
   int64_t elapsed = esp_timer_get_time() - start;
   gpio_set_level(kMeasurePin, 0);
 
+  // BRADLEY
+  vTaskDelay(pdMS_TO_TICKS(50));
+
   if (status != kTfLiteOk) {
     MicroPrintf("ERROR: Invoke() failed");
     return -1;
@@ -205,6 +208,9 @@ int64_t RunFullPipeline(const int16_t* audio, int audio_len,
     int64_t infer_us = esp_timer_get_time() - infer_start;
     int64_t total_us = esp_timer_get_time() - total_start;
     gpio_set_level(kMeasurePin, 0);
+
+    // BRADLEY
+    vTaskDelay(pdMS_TO_TICKS(50));
 
     if (invoke_status != kTfLiteOk) {
       MicroPrintf("ERROR: Invoke() failed");
@@ -376,8 +382,8 @@ void loop() {
   MicroPrintf("====================================");
   PrintMemoryStats("end of benchmark cycle");
   MicroPrintf("====================================");
-  MicroPrintf("Benchmark complete. Restarting in 240s...");
+  MicroPrintf("Benchmark complete. Restarting in 20s...");
   MicroPrintf("====================================\n");
 
-  vTaskDelay(pdMS_TO_TICKS(240000));
+  vTaskDelay(pdMS_TO_TICKS(20000));
 }

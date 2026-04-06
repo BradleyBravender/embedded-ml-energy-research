@@ -1,4 +1,4 @@
-/* * Data converted from /Users/alex/esp/micro_speech/test_data/no_1000ms.wav
+/* * Data converted from /home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/test_data/no_1000ms.wav
  */
 .data
 #if !defined (__APPLE__) && !defined (__linux__)

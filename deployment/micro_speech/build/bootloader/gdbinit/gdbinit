@@ -1,2 +1,2 @@
-source /Users/alex/esp/micro_speech/build/bootloader/gdbinit/symbols
-source /Users/alex/esp/micro_speech/build/bootloader/gdbinit/connect
+source /home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader/gdbinit/symbols
+source /home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader/gdbinit/connect

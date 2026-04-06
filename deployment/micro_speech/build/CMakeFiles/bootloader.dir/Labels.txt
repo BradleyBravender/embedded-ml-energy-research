@@ -1,13 +1,13 @@
 # Target labels
  bootloader
 # Source files and their labels
-/Users/alex/esp/micro_speech/build/CMakeFiles/bootloader
-/Users/alex/esp/micro_speech/build/CMakeFiles/bootloader.rule
-/Users/alex/esp/micro_speech/build/CMakeFiles/bootloader-complete.rule
-/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
-/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
-/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
-/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
-/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
-/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
-/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/CMakeFiles/bootloader
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/CMakeFiles/bootloader.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/CMakeFiles/bootloader-complete.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

@@ -2,34 +2,34 @@
 	"sources" : 
 	[
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/CMakeFiles/bootloader"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/CMakeFiles/bootloader"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/CMakeFiles/bootloader.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/CMakeFiles/bootloader.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/CMakeFiles/bootloader-complete.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/CMakeFiles/bootloader-complete.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule"
 		},
 		{
-			"file" : "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
+			"file" : "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule"
 		}
 	],
 	"target" : 

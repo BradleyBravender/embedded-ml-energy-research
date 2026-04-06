@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/Users/alex/esp/esp-idf/components/bootloader/subproject")
-  file(MAKE_DIRECTORY "/Users/alex/esp/esp-idf/components/bootloader/subproject")
+if(NOT EXISTS "/home/brad/esp/esp-idf/components/bootloader/subproject")
+  file(MAKE_DIRECTORY "/home/brad/esp/esp-idf/components/bootloader/subproject")
 endif()
 file(MAKE_DIRECTORY
-  "/Users/alex/esp/micro_speech/build/bootloader"
-  "/Users/alex/esp/micro_speech/build/bootloader-prefix"
-  "/Users/alex/esp/micro_speech/build/bootloader-prefix/tmp"
-  "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp"
-  "/Users/alex/esp/micro_speech/build/bootloader-prefix/src"
-  "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader"
+  "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix"
+  "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/tmp"
+  "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp"
+  "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src"
+  "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/Users/alex/esp/micro_speech/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/brad/BradleyFolder/school/7_sem/ece442/research_project/embedded-ml-energy-research/deployment/micro_speech/build/bootloader-prefix/src/bootloader-stamp${cfgdir}") # cfgdir has leading slash
 endif()
