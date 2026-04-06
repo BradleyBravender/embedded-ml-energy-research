@@ -1,0 +1,60 @@
+if(!('Scope' in this)) throw "Please open a Scope instrument";
+
+// Analog sample rate (for InstantaneousPower)
+var analog_rate = Scope.Time.Rate.value;
+var dt_analog = 1.0 / analog_rate;
+
+// Digital sample rate (for DIO0)
+var digital_rate = Scope.DigitalTime.Rate.value;
+var dt_digital = 1.0 / digital_rate;
+
+// Number of analog samples per digital sample
+var analog_per_digital = analog_rate / digital_rate;
+
+var energy = 0;
+var elapsed_time = 0;
+var i = 0;
+var measuring = false;
+
+clear();
+
+Scope.run();
+
+while(i < 20) {
+
+    if(!Scope.wait()) throw "Stopped";
+
+    var digital = Scope.DigitalChannels.DIO0.data;       // 0 or 1
+    var analog  = Scope.InstantaneousPower.data;         // power samples
+
+    // Loop over digital samples
+    for(var d = 0; d < digital.length; d++) {
+        if(digital[d] == 1) {
+            measuring = true;
+
+            // integrate corresponding analog samples
+            for(var a = 0; a < analog_per_digital; a++) {
+                // a is an offset (either 0 or 1 in this case)
+                // Floor just ensures the index is always an integer
+                var idx = Math.floor(d * analog_per_digital + a);
+                if(idx < analog.length) {
+                    energy += analog[idx] * dt_analog;
+                    elapsed_time += dt_analog;
+                }
+            } 
+        // When the most recent measurement was a 1 but a 0 is encountered:
+        } else if(measuring) {
+                // Falling edge detected
+                print();
+                print("Sample", i);
+                print("Energy consumed:\t", energy, "J");
+                print("Elapsed time:\t", elapsed_time, "S");
+    
+                // reset for next measurement
+                energy = 0;
+                elapsed_time = 0;
+                i++;
+                measuring = false;
+        }
+    }
+}
