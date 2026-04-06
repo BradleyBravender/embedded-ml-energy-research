@@ -68,12 +68,32 @@ Follow the official guide:
 https://docs.espressif.com/projects/esp-idf/en/latest/get-started/index.html
 
 Ensure:
-- `idf.py` is available  
+- `idf.py` is available. Once esp-idf is installed, this can be done with:  
+  ```
+  source ~/esp/esp-idf/export.sh
+  ```
 - environment variables are set  
 
 ---
 
-## Build, Flash, and Monitor (while in project directory)
+## Build, Flash, and Monitor (while in `micro_speech/` project directory)
 
+On Alex's computer (MacOS):
 ```bash
 idf.py build && idf.py -p /dev/cu.usbserial-0001 flash monitor
+```
+
+To build on Bradley's computer (Ubuntu 24.04):
+```
+rm -rf build managed_components dependencies.lock
+idf.py reconfigure
+idf.py build
+idf.py -p /dev/ttyUSB0 flash monitor
+```
+
+## Full Testing Workflow
+1. Ensure everything is wired correctly.
+2. Load the model of interest into `deployment/micro_speech/main/model.cc`.
+3. Run the WaveForms collection script, and then the test script.
+4. Record the WaveForms output, and the serial monitor output for the test.
+5. Once all tests are completed, parse the outputs into the results spreadsheet. 
